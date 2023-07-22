@@ -1,0 +1,138 @@
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 87rem;
+  margin-top: 95rem;
+  margin-bottom: 144rem;
+  @include desktop-small {
+    flex-direction: column-reverse;
+    gap: 40rem;
+    align-items: center;
+    margin-top: 45rem;
+    padding-top: 80rem;
+  }
+ 
+  @include tablet {
+    margin-top: 10rem;
+    margin-bottom: 50rem;
+    padding-top: 110rem;
+  }
+  @include tablet-small {
+    margin-top: 2rem;
+    gap: 20rem;
+  }
+
+  &__image {
+    position: relative;
+    @include desktop-small {
+      max-width: 75%;
+      margin-left: 480rem;
+      @include tablet {
+        margin-left: 100rem;
+      }
+    }
+    @include tablet {
+      z-index: 2;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 74%;
+      height: 74%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #4d4a45 0%, #292824 100%);
+      bottom: 178rem;
+      left: 154rem;
+      z-index: -1;
+      @include desktop-small {
+        width: 54%;
+        height: 71%;
+        bottom: 138rem;
+        left: 122rem;
+      }
+      @include tablet-small {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 45%;
+      height: 45%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #4d4a45 0%, #292824 100%);
+      top: 297rem;
+      right: 224rem;
+      z-index: -1;
+      @include desktop-small {
+        width: 30%;
+        height: 39%;
+        top: 253rem;
+        right: 303rem;
+      }
+      @include tablet-small {
+        display: none;
+      }
+    }
+    img {
+      border: 10rem solid #ed9902;
+      border-radius: 50%;
+      box-shadow: 0rem 15rem 14rem 0rem rgba(0, 0, 0, 0.59);
+      @include desktop-small {
+        max-width: 75%;
+      }
+    }
+  }
+}
+.info-main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 24rem;
+  max-width: 583rem;
+  @include desktop-small {
+    margin-right: 380rem;
+    gap: 14rem;
+  }
+  @include tablet {
+    margin-right: 0;
+  }
+
+  &__title {
+    white-space: nowrap;
+    @include text($white, $ff, 92rem, 700, normal);
+    @include adaptiv-font(92, 34);
+    @media screen and (min-width: 1200px) {
+      @include text($white, $ff, 92px, 700, normal);
+    }
+  }
+
+  &__subtitle {
+    @include text($white, $ff, 18rem, 500, normal);
+    text-transform: uppercase;
+    @include adaptiv-font(18, 14);
+    @media screen and (min-width: 1200rem) {
+      @include text($white, $ff, 18rem, 500, normal);
+    }
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+    span {
+      display: inline-block;
+      margin: 0rem 27rem;
+      @include tablet-small {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+      }
+    }
+  }
+  &__desc {
+    @include text($grey, $ff, 16rem, 400, 160%);
+  }
+}
+

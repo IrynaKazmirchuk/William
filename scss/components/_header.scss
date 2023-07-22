@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25rem;
+  @include desktop-small {
+    height: 87rem;
+    position: fixed;
+    width: 100%;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    top: 0;
+    left: 0;
+    background: $item-bg;
+	box-shadow: 0rem 15rem 14rem 0rem rgba(0, 0, 0, 0.59);
+    z-index: 999;
+  }
+@include tablet-small {
+	box-shadow: 0rem 5rem 14rem 0rem $grey;
+}
+  &__logo img {
+    @include mobile {
+      max-width: 75%;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+
+    @include tablet {
+      position: fixed;
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      background: var(--c-primary);
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-120%);
+      transition: var(--transition);
+      z-index: 3;
+      gap: 28rem;
+    }
+
+    &._active {
+      transform: translateX(0);
+    }
+
+    .icon-close {
+      position: absolute;
+      top: 40rem;
+      right: 40rem;
+      color: var(--c-text-white);
+    }
+  }
+
+  &__a {
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--c-text-white);
+    transition: var(--transition);
+    @include tablet {
+      font-size: 24rem;
+    }
+
+    &._active,
+    &:hover {
+      color: var(--c-primary);
+    }
+  }
+}
+
+.icon-menu,
+.icon-close {
+  cursor: pointer;
+  display: none;
+  @include tablet {
+    display: inline-block;
+  }
+}
+.icon-menu {
+  color: $white;
+}

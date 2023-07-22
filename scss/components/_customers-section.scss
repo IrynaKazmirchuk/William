@@ -1,0 +1,42 @@
+.customers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26rem;
+  margin-bottom: 113rem;
+  @include tablet {
+    grid-template-columns: 1fr;
+    margin-bottom: 70rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 12rem;
+    padding: 32rem;
+    gap: 28rem;
+    background: $item-bg;
+  }
+}
+.item {
+  &__reviews {
+    @include text($white, $ff, 18rem, 400, 160%);
+    @include adaptiv-font(18, 14);
+  }
+
+  &__data {
+    display: flex;
+    gap: 20rem;
+    align-items: center;
+
+  }
+}
+
+.clients {
+  &__name {
+    @include text($white, $ff, 18rem, 500, 160%);
+  }
+
+  &__prof {
+    @include text($primaryOrange, $ff, 18rem, 400, 160%);
+  }
+}

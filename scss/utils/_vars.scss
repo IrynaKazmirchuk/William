@@ -1,0 +1,41 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 767px;
+$mobile: 576px;
+
+// = width of general container/ for adaptive fonts (@mixin adaptiv-font($pcSize, $mobSize)) 
+$maxWidth: 1140;
+
+// font
+$ff: 'Rubik', sans-serif;
+
+// colors
+$black: #000;
+$white: #fff;
+$grey: #9B9688;
+$primaryOrange: #ED9902;
+
+$body-bg:  #21201E;
+$item-bg: #2D2B29;
+
+$c-border: #eee;
+
+// 
+$btnRadius: 5px;
+
+$transition: .3s all ease-in-out;
+
+$footer-height: 500px;
+
+
+:root {
+	--ff: 'Rubik', sans-serif;
+	--transition: .3s all ease-in-out;
+	--c-primary: #ED9902;
+	--c-text-white: #fff;
+	--c-text-secondary: #9B968B;
+	--c-border: #eee;
+	--services-bg: #2D2B29;
+	--body-bg: #21201E;
+}

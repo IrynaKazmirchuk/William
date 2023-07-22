@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 53rem 20rem;
+  background: $item-bg;
+  @include desktop-small {
+    padding: 30rem 20rem;
+    box-shadow: 0rem -15rem 14rem 0rem rgba(0, 0, 0, 0.59);
+  }
+
+  @include tablet {
+    flex-direction: column-reverse;
+    padding: 30rem 20rem;
+    gap: 40rem;
+  }
+  &__copy {
+    @include text($white, $ff, 16rem, 400, normal);
+    @include adaptiv-font(16, 11);
+    .copy-span {
+      color: $primaryOrange;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 34rem;
+    @include tablet-small {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__a {
+    @include text($white, $ff, 16rem, 400, normal);
+    transition: $transition;
+
+    &:hover {
+      color: var(--c-primary);
+    }
+  }
+}

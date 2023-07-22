@@ -1,0 +1,43 @@
+html {
+  font-size: 1px;
+}
+body {
+  font-family: var(--ff);
+  background: var(--body-bg);
+}
+
+.wraper {
+  max-width: calc(1140rem + 20rem);
+  padding: 20rem;
+  margin-inline: auto;
+  
+}
+
+.section {
+  margin-top: 90rem;
+  padding-top: 90rem;
+  border-top: 1rem solid rgba(255, 255, 255, 0.15);
+  @include mobile {
+    margin-top: 70rem;
+    padding-top: 70rem; 
+  }
+}
+.btn {
+  padding: 13rem 18rem;
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: $btnRadius;
+  @include text($white, $ff, 16rem, 400, normal);
+
+  &._primary {
+    background: $primaryOrange;
+    color: $white;
+    transition: $transition;
+    &:hover {
+      background: darken($primaryOrange, 10%);
+      scale: 0.9;
+    }
+  }
+}
